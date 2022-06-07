@@ -20,7 +20,7 @@ A- Library is web-based app aimed at providing a platform for accessing books ma
 - The system is able to generate a report on books to be returned, penalty and students accounted.
 - The student can pick physically the  book requested and confirmed at the library.
 
-## Develop Team members,Tools and rights
+    # Develop Team members,Tools and rights
  
 - only teams members can have full access to dashboard of the application to edit and make appropriate changes during development. 
  - And for this to come unto completion of the project, it will involve team-work with updates made, performance 
