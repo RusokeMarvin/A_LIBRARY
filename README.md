@@ -25,6 +25,6 @@ A- Library is web-based app aimed at providing a platform for accessing books ma
 - only teams members can have full access to dashboard of the application to edit and make appropriate changes during development. 
  - And for this to come unto completion of the project, it will involve team-work with updates made, performance 
 monitored   on Gitlab using a common Django framework,Extreme programming for timely quality product and with python interpreter.
- -the project is to completed by july first week and part of changes need offline for coding and online for updates. 
+ -the project is to completed by july first week and part of changes need offline for coding and online for updates. finally we are ooh we are about to commit something. so now let us enjoy.
 
 
