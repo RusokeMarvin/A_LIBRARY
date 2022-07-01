@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+              height:100%;
+             background-color: darkgoldenrod;
+             text-align: center;
+             } 
+             </style>
+    </head>
+
+<body>
+<h1>Signup Page </h1>
+
+<form action="" method="POST">
+{% csrf_token %}
+{% if error %}
+{{ error }}
+{% endif %}
+{{ form.as_p }}
+<input type="submit" name="submit" value="Sign up"/>
+</form>
+</body>
+
+
+</html>
+
