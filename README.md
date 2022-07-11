@@ -27,7 +27,7 @@ A- Library is web-based app aimed at providing a platform for accessing books ma
 monitored   on Gitlab using a common Django framework,Extreme programming for timely quality product and with python interpreter.
  -the project is to completed by july first week and part of changes need offline for coding and online for updates.
 
- This project is meant to benefit not only the students but also enhance the ugandan education system to facilitate easy learning and acquisition of reading equipments
+ This project is meant to benefit not only the students but also enhance the ugandan education system to facilitate easy learning and acquisition of reading equipments.
 
 
 
