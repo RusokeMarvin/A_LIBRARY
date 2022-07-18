@@ -1,0 +1,8 @@
+install python 3.10 and above
+install django4.5
+create superuser for database
+use makemigrations
+migrate
+follow other resource how to use django and python
+
+
