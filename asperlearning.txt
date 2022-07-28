@@ -1,0 +1,6 @@
+the lessons learnt ...
+Development is gradual step by step ,up and downs with practice, time and testing
+One evening having appplied css next testing morning nowhere to be seen no source of help just had search about meaning of keywords,to exchange keywords include and extend templates
+For Deployment the paths in settings and all necessary requirment forexample- django migrations, restfframework,refesh, use log events,use commands all these helped alot
+Pair programming is among the best techniques to learn programmming with user interaction as team to solve.
+learning does not end....but mostly the training is better from our instructor.best regards since atleast now everything has been open-ended  to explore other languages such as php, jason codes, jsp and etcin ict world
