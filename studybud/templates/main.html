@@ -13,11 +13,13 @@
 <body>
     {% include 'navbar.html' %}
     
-    <button style="color:brown">MENU</button><a href="http://127.0.0.1:8000/home"> <button style="color:red">HOME</button></a> <a href="http://127.0.0.1:8000/">Login/Register</a>
+    <button style="color:brown">MENU</button><a href="http://127.0.0.1:8000/home"> <button style="color:red">HOME</button></a> <a href="{% url 'signup' %}"> <button>Login/Register</a></button>
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
-        <li>{{ message }}</li>
+           <div class="alert-{{ message.tags}}">
+            {{ message }}
+           </div>
         {% endfor %}
     </ul>
     {% endif %}

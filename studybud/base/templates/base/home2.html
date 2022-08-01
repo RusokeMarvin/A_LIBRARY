@@ -1,4 +1,4 @@
-{% extends 'main.html' %}
+{% extends 'navbar.html' %}
 
 {% block content %}
 
@@ -10,6 +10,7 @@
     <div>
         {% for room in rooms %}
             <div>
+                <a href="{% url 'delete-room' room.id %}">Delete book</a>
                 <h5>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a></h5
             </div>
 
@@ -17,6 +18,7 @@
     <div>
 
 </div>
+<a href="{% url 'addbook' %}"><button >ADD A BOOK</button></a>
 
 
 

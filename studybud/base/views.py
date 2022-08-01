@@ -19,9 +19,6 @@ def home(request):
     context = {'rooms': rooms}
     return render(request, 'base/home.html', context )
 
-def signup(request):
-    return render(request,'base/signup.html')
-
 def loginpage(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -46,6 +43,21 @@ def room(request, pk):
     return render(request, 'base/room.html', context)
 
 def adminlog(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        try:
+            user = User.objects.get(username=username)
+        except:
+            messages.error(request,'user does not exist')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('home2')
+        else:
+            messages.error(request,'username or password does not exist')   
+    context = {}
     return render(request,'base/adminlog.html')
 
 def addbook(request):
@@ -57,3 +69,15 @@ def addbook(request):
             return redirect('home')
     context = {'form' : form}
     return render(request,'base/addbook_form.html', context)
+
+def deleteBook(request, pk):
+    room = Book.objects.get(id=pk)
+    if request.method == 'POST':
+        room.delete()
+        return redirect('home')
+    return render(request, 'base/deletebook.html', {'obj':room})
+
+def home2(request):
+    rooms = Book.objects.all()
+    context = {'rooms': rooms}
+    return render(request, 'base/home2.html', context )

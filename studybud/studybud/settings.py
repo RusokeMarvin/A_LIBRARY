@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-6^%emo%qqw*y9bnb2m8hjpxr7)ei4+%%ye9%&#wr5edmny1u94
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['alibraryapp.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'base.apps.BaseConfig',
+    'base.apps.BaseConfig',
+    'users.apps.UsersConfig',
      
      
 ]
