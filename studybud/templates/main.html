@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-compatible' content='IE=edge>
+    <title>A-LIBRARY</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    
+    <button style="color:brown">MENU</button><a href="http://127.0.0.1:8000/home"> <button style="color:red">HOME</button></a> <a href="{% url 'signup' %}"> <button>Login/Register</a></button>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+           <div class="alert-{{ message.tags}}">
+            {{ message }}
+           </div>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% block content %}
+
+
+    {% endblock %}
+
+</body>
+
+</html>

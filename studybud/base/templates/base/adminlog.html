@@ -1,0 +1,18 @@
+{% extends 'navbar.html' %}
+
+{% block content %}
+<br><br>
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label>username</label>
+        <input type="text" name="username" placeholder="Enter username" />
+        <br><br>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter Admin Password" />
+        <br><br>
+        <input type="submit" value="LOGIN AS ADMIN" />
+    </form>
+</div>
+
+{% endblock %}
