@@ -1,0 +1,29 @@
+{% include 'base.html'%}
+{% load static %}
+{% block css %}
+{% endblock %}
+{% block Content %}
+  
+<div class="p-4 bg-light">
+    <div class="container-fluid py-3">
+      <h1  class="display-5 fw-bold">:Welcome To A_Library::The Home of::Book Resources</h1>
+      <p class="col-md-8 fs-4">As student you can borrow ,view boks  and return back as Agreed.The Admin will be able to post any book with others rights</p>
+      </div>
+    <br>
+    <div class="container">
+  <div class="row">
+
+    <div class="col-lg-6">
+      <img src="{% static 'adminIcon.png' %}" width="10%" height="10%" alt=""><br><br>
+        <a class="btn btn-outline-primary btn-lg" style="text-align:center" href="/admin_login/">Admin</a>
+    </div>
+
+    <div class="col-lg-6">
+      <img src="{% static 'student.png' %}" width="10%" height="10%" alt=""><br><br>
+      <a class="btn btn-outline-primary btn-lg"  href="/student_login/"> Student</a> 
+    </div>
+  </div>
+  </div>
+</div>
+
+{% endblock %}

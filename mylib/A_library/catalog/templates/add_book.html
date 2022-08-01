@@ -1,0 +1,80 @@
+{% include "admin_navbar.html"%}
+{% load static %}
+
+{% block css %}
+{% endblock %}
+{% block body %}
+
+<div class="container">
+    <form  method="POST" > {% csrf_token %}
+        <div class="row mt-4">
+            <div class="form-group col-md-12">
+                <label><i style="font-weight: bold;">book_id</i></label>
+                <input type="text" class="form-control mt-2" name="book_id" placeholder="Enter book_id of the book" required>
+            </div>
+        </div>
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">title</i></label>
+            <input type="text" class="form-control mt-2" name="title" placeholder="Enter title of the Book" required>
+        </div>
+    </div>
+ 
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">Author</i></label>
+            <input type="text" class="form-control mt-2" name="author" placeholder="Enter name of the Author" required>
+        </div>
+    </div>
+ 
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">ISBN Number</i></label>
+            <input type="number" class="form-control mt-2" name="isbn" placeholder="Enter ISBN number of the book" required>
+        </div>
+    </div>
+ 
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">descripition</i></label>
+            <input type="text" class="form-control mt-2" name="descripition" placeholder="Enter description of the book" required>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">date_of _publication</i></label>
+            <input type="text" class="form-control mt-2" name="date_of_publication" placeholder="Enter date_of publication of the book" required>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">uploded_by</i></label>
+            <input type="text" class="form-control mt-2" name="uploaded_by" placeholder="Enter uploded_by of the book" required>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">subject_area</i></label>
+            <input type="text" class="form-control mt-2" name="book_status" placeholder="Enter subject_area of the book" required>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="form-group col-md-12">
+            <label><i style="font-weight: bold;">book_status</i></label>
+            <input type="text" class="form-control mt-2" name="subject_area" placeholder="Enter status of the book" required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-outline-primary mt-4" > Add Book </button>
+    <a type="button" class="btn btn-danger" href="{%url 'view_books' %}">Cancel</a>
+</div>
+</form>
+{% endblock %}
+
+{% block js %}
+<script>
+    {% if alert %} 
+    alert("Book is added successfully.")
+    document.location = "/view_books"
+    {% endif %}
+</script>
+{% endblock %}

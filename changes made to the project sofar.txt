@@ -1,0 +1,6 @@
+1.Models For payments were removed/delete since they made a repetition in borrower models particularly.
+2.views for login both students and admin were changed to fit bootstrapv5 feature,css and java featuresand are effective now.
+3.changes are still made since some features are not yet active...such addbooks,  delete and login parts  to have reasonable display of results.
+4.Foreaxample the admin would login to all the accounts that is nolonger available.
+5.A feature of report has made a difference  for the admin  since printing reports is easy.
+Thanks.
