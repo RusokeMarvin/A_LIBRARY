@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% if searched %}
+   <h1>You searched For {{ searched }}</h1>
+   <br/>
+   {% for book in books %}
+       {{book}} - {{book.description}} <br/>
+   {% endfor %}
+{% else%}
+   <h1>Hey! You Forgot To Enter Book</h1>
+{% endif %}
+{% endblock content %}

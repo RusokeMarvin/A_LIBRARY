@@ -13,8 +13,7 @@
 <body>
     {% include 'navbar.html' %}
     
-    <button style="color:brown">MENU</button><a href="{% url 'home' %}"> <button style="color:red">HOME</button></a> <a href="{% url 'signup' %}"> <button>Login/Register</a></button>
-    <a href="{% url 'signup' %}"> <button>Logout</a></button>
+    <button style="color:brown">MENU</button><a href="{% url 'home2' %}"> <button style="color:red">HOME</button></a> <a href="{% url 'signup' %}"> <button>Login/Register</a></button>
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}

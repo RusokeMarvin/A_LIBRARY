@@ -81,3 +81,11 @@ def home2(request):
     rooms = Book.objects.all()
     context = {'rooms': rooms}
     return render(request, 'base/home2.html', context )
+
+def search(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        books = Book.objects.filter(name__contains=searched)
+        return render(request, 'base/search.html', {'searched': searched,'books' : books})
+    else:
+        return render(request, 'base/search.html', {})
