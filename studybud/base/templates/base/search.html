@@ -5,7 +5,8 @@
    <h1>You searched For {{ searched }}</h1>
    <br/>
    {% for book in books %}
-       {{book}} - {{book.description}} <br/>
+   <br>
+       {{book.name}} <br> {{book.description}}
    {% endfor %}
 {% else%}
    <h1>Hey! You Forgot To Enter Book</h1>

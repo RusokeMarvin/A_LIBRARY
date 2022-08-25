@@ -1,8 +1,10 @@
-{% extends 'navbar.html' %}
+{% extends 'navbar2.html' %}
 
 {% block content %}
 <br><br>
 <div>
+    <fieldset>
+    <legend style="color:red"> STUDENT LOGIN</legend>
     <form method="POST" action="">
         {% csrf_token %}
         <label>username</label>
@@ -10,8 +12,9 @@
         <br><br>
         <label>Password</label>
         <input type="password" name="password" placeholder="Enter Password" />
-        <input type="submit" value="LOGIN" />
+        <input style="color:red" type="submit" value="LOGIN" />
     </form>
+    </fieldset>
 </div>
 
 {% endblock %}

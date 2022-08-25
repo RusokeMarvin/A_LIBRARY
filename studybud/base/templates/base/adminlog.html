@@ -1,8 +1,10 @@
-{% extends 'main2.html' %}
+{% extends 'navbar2.html' %}
 
 {% block content %}
 <br><br>
 <div>
+    <fieldset>
+    <legend style="color:red"> ADMIN LOGIN</legend>
     <form method="POST" action="">
         {% csrf_token %}
         <label>username</label>
@@ -11,8 +13,9 @@
         <label>Password</label>
         <input type="password" name="password" placeholder="Enter Admin Password" />
         <br><br>
-        <input type="submit" value="LOGIN AS ADMIN" />
+        <input style="color:red" type="submit" value="LOGIN AS ADMIN" />
     </form>
+    </fieldset>
 </div>
 
 {% endblock %}
