@@ -1,0 +1,24 @@
+{% extends 'navbar2.html' %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <legend style="color:red">Join us Today</legend>
+                {{ form.as_p }}
+            </fieldset>
+            <div class="form-group">
+                <button style="background-color:green" class="btn-outline-info" type="submit"><a style="color:white">Sign up</a></button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already have an Account? <a class="ml-2" href="{% url 'login' %}">Login As Student</a>
+                <br><br>
+                OR <a class="ml-2" href="{% url 'adminlog' %}">Login As ADMIN</a>
+            </small>
+
+        </div>
+    </div>
+{% endblock %}

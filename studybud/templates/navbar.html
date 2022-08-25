@@ -1,0 +1,11 @@
+<a href="/">
+    <h1>A-LIBRARY</h1>
+</a>
+<form class="d-flex" method="POST" action="{% url 'search' %}">
+    {% csrf_token %}
+    <input class="form-control me-2" type="search" placeholder="Search Book" arial-label="Search" name="searched"><button class="btn btn-outline-secondary" type="submit" style="background-color:rgba(255, 0, 0, 0.425)">Search</button></form>
+<hr>
+{% block content %}
+
+
+{% endblock %}
