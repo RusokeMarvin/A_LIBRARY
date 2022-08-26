@@ -33,7 +33,7 @@ def loginpage(request):
             login(request, user)
             return redirect('home')
         else:
-            messages.error(request,'username or password does not exist')   
+            messages.error(request,'username or password does not exist') 
     context = {}
     return render(request,'base/loginpage.html', context)
 
@@ -52,13 +52,13 @@ def adminlog(request):
         except:
             messages.error(request,'user does not exist')
         user = authenticate(request, username=username, password=password)
-        if user is not None:
+        if user is not None and user.is_superuser:
             login(request, user)
             return redirect('home2')
         else:
-            messages.error(request,'username or password does not exist')   
+            messages.error(request,'NOT AUTHORIZED AS ADMIN')   
     context = {}
-    return render(request,'base/adminlog.html')
+    return render(request,'base/adminlog.html',context)
 
 def addbook(request):
     form = BookForm()
@@ -66,7 +66,7 @@ def addbook(request):
         form = BookForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('home2')
     context = {'form' : form}
     return render(request,'base/addbook_form.html', context)
 
@@ -74,10 +74,18 @@ def deleteBook(request, pk):
     room = Book.objects.get(id=pk)
     if request.method == 'POST':
         room.delete()
-        return redirect('home')
+        return redirect('home2')
     return render(request, 'base/deletebook.html', {'obj':room})
 
 def home2(request):
     rooms = Book.objects.all()
     context = {'rooms': rooms}
     return render(request, 'base/home2.html', context )
+
+def search(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        books = Book.objects.filter(name__contains=searched)
+        return render(request, 'base/search.html', {'searched': searched,'books' : books})
+    else:
+        return render(request, 'base/search.html', {})

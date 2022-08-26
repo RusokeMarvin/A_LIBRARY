@@ -11,6 +11,7 @@ urlpatterns = [
     path('adminlog/',views.adminlog,name="adminlog"),
     path('addbook/',views.addbook,name="addbook"),
     path('home2/',views.home2,name = "home2"),
+    path('search/',views.search,name = "search"),
 
     
 ]

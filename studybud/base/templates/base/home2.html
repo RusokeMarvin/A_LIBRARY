@@ -1,4 +1,4 @@
-{% extends 'navbar.html' %}
+{% extends 'main2.html' %}
 
 {% block content %}
 
@@ -11,7 +11,9 @@
         {% for room in rooms %}
             <div>
                 <a href="{% url 'delete-room' room.id %}">Delete book</a>
-                <h5>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a></h5
+                <h5>{{room.id}} -- <a href="/room/{{room.id}}">{{room.name}}</a>
+                    <input name="issue" type="submit" value="ISSUE BOOK"> </h5>
+               
             </div>
 
         {% endfor %}
